@@ -1,27 +1,31 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
-abstract AbstractCollection
-interface List
-interface Collection
 
-List <|-- AbstractList
-Collection <|-- AbstractCollection
-
-Collection <|- List
-AbstractCollection <|- AbstractList
-AbstractList <|-- ArrayList
-
-class ArrayList {
-Object[] elementData
-size()
+class Application {
+start()
+main()
+stop()
+openFile()
+handle()
+saveFile()
 }
 
-enum TimeUnit {
-DAYS
-HOURS
-MINUTES
+Application <|-- Task
+class Task {
+addTask()
+editTask()
+deleteTask()
+initializeList()
 }
+Application <|-- Filter
+class Filter{
+displayFilter()
+}
+
+Filter *-- displayFilter
+displayFilter : boolean allItems
+displayFilter : boolean incomplete
+displayFilter : boolean complete
 
 @enduml

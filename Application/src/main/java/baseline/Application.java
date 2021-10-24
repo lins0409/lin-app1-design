@@ -3,10 +3,13 @@
  *  Copyright 2021 Sue Lin
  */
 package baseline;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.io.File;
 
 public class Application extends javafx.application.Application {
 
@@ -26,4 +29,30 @@ public class Application extends javafx.application.Application {
         launch(args);
     }
 
+    //closes the program
+    public void stop(){
+
+    }
+
+    //loads a pre-existing to-do list
+    void openFile(File inputFile){
+        //read in the value and make sure it's not null
+    }
+
+    //handles all the events
+    void handle(ActionEvent event){
+        //allow for scrolling through the list
+        //button handling here?
+        //if the filter button is pressed, access the filter class
+        //for everything else, access the task class
+    }
+
+    //exports/updates/creates a to-do list
+    void saveFile(File exportFile){
+        //let user type in name for to-do list if they want to change it
+        //save string
+        //name the list after the string
+        //ask/allow user to decide where they want to save the list
+        //export
+    }
 }

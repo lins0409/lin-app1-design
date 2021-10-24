@@ -36,6 +36,7 @@ public class Application extends javafx.application.Application {
 
     //loads a pre-existing to-do list
     void openFile(File inputFile){
+        //find the file that the user wants to open
         //read in the value and make sure it's not null
     }
 

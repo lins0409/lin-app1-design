@@ -3,16 +3,19 @@
 
 
 class Application {
-start()
-main()
+start(Stage primaryStage)
+main(String[] args)
 stop()
-openFile()
-handle()
-saveFile()
+openFile(File inputFile)
+handle(ActionEvent event)
+saveFile(File exportFile)
 }
 
 Application <|-- Task
-class Task {
+class TaskList {
+String: task
+int: deadline
+boolean: complete
 addTask()
 editTask()
 deleteTask()

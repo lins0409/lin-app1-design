@@ -1,7 +1,13 @@
 package baseline;
 
 //this will be the class that modify tasks
-public class Task {
+public class TaskList {
+    //constructor
+    TaskList (){
+        String task;
+        int deadline;
+        boolean complete;
+    }
 
     //adds new task to list
     void addTask(){
